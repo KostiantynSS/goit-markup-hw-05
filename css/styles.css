@@ -124,6 +124,9 @@ a {
   padding: 0;
   margin-left: 76px;
 }
+.header-list > li {
+  position: relative;
+}
 .header-item {
   display: block;
 
@@ -137,11 +140,28 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-item:active,
 .header-item:hover,
 .header-item:focus {
   color: var(--header-action-color);
+}
+.header-item.currant-page {
+  color: var(--header-action-color);
+}
+.header-item.currant-page::after {
+  display: block;
+  position: absolute;
+  top: 45px;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  border-color: var(--header-action-color);
+  background-color: var(--header-action-color);
 }
 /* ADDRESS */
 .main-address {
@@ -164,6 +184,9 @@ a {
   letter-spacing: 0.02em;
   color: var(--contact-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-item:active,
 .address-item:hover,
@@ -220,6 +243,9 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -355,6 +381,9 @@ a {
   height: 40px;
   border-radius: 50%;
   color: #f4f4fd;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-link:hover,
 .item-link:focus {
@@ -392,6 +421,9 @@ a {
   border-radius: 4px;
   width: 168px;
   height: 88px;
+  transition-property: border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .costumer-link:hover,
@@ -442,6 +474,9 @@ a {
   height: 40px;
   border-radius: 50%;
   color: #f4f4fd;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -474,6 +509,9 @@ a {
   padding: 12px 24px;
   border: 1px solid var(--accent-color);
   cursor: pointer;
+  transition-property: box-shadow, border-color, color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-btn:hover,
 .nav-btn:focus {
@@ -516,6 +554,9 @@ a {
 .presentation-link {
   text-decoration: none;
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .presentation-link:hover,
@@ -542,6 +583,7 @@ a {
 
   position: absolute;
   top: 0;
+
   height: 100%;
   background-color: var(--background-btn-color);
   padding-top: 40px;

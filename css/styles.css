@@ -130,10 +130,6 @@ a {
 .header-item {
   display: block;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -619,15 +615,28 @@ a {
   border-radius: 4px;
   background-color: var(--modal-background-color);
 }
+.modal-icon {
+  fill: currentColor;
+}
 .backdrop-btn {
   position: absolute;
+  padding: 0;
   top: 24px;
   right: 24px;
+  display: flex;
   cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  color: rgba(46, 47, 66, 1);
+  justify-content: center;
+  align-items: center;
+}
+.backdrop-btn:is(:hover, :focus) {
+  background-color: #404bbf;
+  color: rgba(255, 255, 255, 1);
 }
 .is-hidden {
   opacity: 0;
